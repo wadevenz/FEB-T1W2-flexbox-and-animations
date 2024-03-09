@@ -21,11 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
-
     text-align: center;
-
     align-items: center;
-
     height: 100dvh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif
@@ -69,6 +66,39 @@ main.row {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+}
+
+a:hover {
+    background-color: var(--blue-dark);
+    animation: spin 2s infinite linear;
+}
+
+h1:hover {
+    animation: bounce 2s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        color: var(--blue-lighter);
+    }
+
+    25% {
+        color: var(--blue-dark)
+    }
+
+    50% {
+        color: var(--blue-darker)
+    }
+
+    75% {
+        color: var(--blue-dark)
+    }
+
+    100% {
+        transform: rotate(360deg);
+        color: var(--blue-lighter)
+    }
 }
 
 /* desktop styling goes here */
