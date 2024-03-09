@@ -73,8 +73,13 @@ a:hover {
     animation: spin 2s infinite linear;
 }
 
-h1:hover {
-    animation: bounce 2s;
+h1 {
+    overflow: hidden; 
+    border-right: .15em solid var(--blue-darker); 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 @keyframes spin {
@@ -99,6 +104,19 @@ h1:hover {
         transform: rotate(360deg);
         color: var(--blue-lighter)
     }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: var(--blue-lighter); }
 }
 
 /* desktop styling goes here */
